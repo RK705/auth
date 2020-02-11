@@ -1,0 +1,11 @@
+const express=require('express')
+const cors=require('cors')
+const bodyParser=require('body-parser')
+const app=express()
+app.use(cors())
+app.use(bodyParser.json())
+app.use('/',(req,res,next)=>{
+    console.log(req.body)
+    res.send("Chall to rahah hi")
+})
+app.listen(3333,()=>console.log("Chall gyya bava"))
